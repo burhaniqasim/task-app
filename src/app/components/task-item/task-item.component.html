@@ -1,0 +1,27 @@
+<!-- <div class="ui middle aligned divided list border-top border-left">
+    <div class="item">
+        <div class="right floated content">
+            <i (click)="deleteTask()" class="trash alternate outline icon"></i>
+        </div>
+        <div class="content">
+            <div class="header bold">{{task.text}}</div>
+            <div class="description">{{task.day}}</div>
+        </div>
+    </div>
+</div>
+ -->
+ <div class="ui message margin-top-15" [ngClass]="task.reminder ? 'active-alert':''">
+    <div class="header pointer" (dblclick)="editTask()">
+        {{task.text}}
+    </div>
+    <div class="ui middle list pad-0">
+        <div class="item">
+            <div class="right floated content">
+                <i (click)="deleteTask()" class="trash alternate outline icon pointer"></i>
+            </div>
+            <div class="content">
+                <div class="description">{{task.day | date:'long'}}</div>
+            </div>
+        </div>
+    </div>
+</div>

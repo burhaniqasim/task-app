@@ -1,0 +1,25 @@
+<div class="sixteen wide column">
+    <form class="ui form" (submit) = "handleTaskSubmit()">
+        <div class="field">
+            <div class="fields">
+                <div class="sixteen wide field">
+                    <input type="text" name="text" [(ngModel)] = "text" placeholder="Enter Task" >
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <div class="fields">
+                <div class="sixteen wide field">
+                    <input type="datetime-local" name="day" [(ngModel)] = "day" placeholder="Date and Time">
+                </div>
+            </div>
+        </div>
+        <div class="inline field">
+            <div class="ui toggle checkbox">
+            <input type="checkbox" tabindex="0" class="" name="reminder" [(ngModel)] = "reminder">
+            <label>Reminder</label>
+            </div>
+        </div>
+        <input type="submit" value="Sumbit" class="ui button"/>
+      </form>
+</div>

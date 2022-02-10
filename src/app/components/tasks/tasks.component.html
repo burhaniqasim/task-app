@@ -1,0 +1,9 @@
+<!-- <app-addtask-form class="sixteen wide column" (onAddTask)= "addTask($event)"></app-addtask-form> -->
+<div class="ui middle aligned divided list">
+    <app-task-item 
+        *ngFor="let task of tasks" 
+        [task]="task" 
+        (onDeleteTask) = "deleteTask(task)"
+        (editTask) = "toggleAlert(task)"
+        >{{task.text}}</app-task-item>
+</div>
